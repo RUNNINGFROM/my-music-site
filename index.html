@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Upload</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #uploadForm {
+            margin-top: 50px;
+        }
+        #uploadButton {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Music Upload Site</h1>
+    <p>Upload your audio files below:</p>
+
+    <!-- Form for uploading music -->
+    <div id="uploadForm">
+        <input type="file" id="fileInput" accept="audio/*">
+        <button id="uploadButton" onclick="uploadFile()">Upload Music</button>
+    </div>
+
+    <script>
+        function uploadFile() {
+            const fileInput = document.getElementById("fileInput");
+            const file = fileInput.files[0];
+            if (file) {
+                alert("File " + file.name + " uploaded successfully!");
+            } else {
+                alert("Please select a file to upload.");
+            }
+        }
+    </script>
+</body>
+</html>
